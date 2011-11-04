@@ -52,6 +52,7 @@ placement algorithm.
 %doc %{_texmfdistdir}/doc/generic/pst-tvz/pst-tvz-doc.tex
 #- source
 %doc %{_texmfdistdir}/source/generic/pst-tvz/Makefile
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +63,5 @@ placement algorithm.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
