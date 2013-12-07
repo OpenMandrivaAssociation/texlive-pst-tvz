@@ -6,7 +6,7 @@
 # catalog-version 1.01
 Name:		texlive-pst-tvz
 Version:	1.01
-Release:	5
+Release:	6
 Summary:	Draw trees with more than on root node, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-tvz
