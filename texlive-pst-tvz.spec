@@ -1,19 +1,13 @@
-# revision 23451
-# category Package
-# catalog-ctan /graphics/pstricks/contrib/pst-tvz
-# catalog-date 2011-06-14 17:30:27 +0200
-# catalog-license lppl1.3
-# catalog-version 1.01
 Name:		texlive-pst-tvz
-Version:	1.01
-Release:	11
+Version:	23451
+Release:	1
 Summary:	Draw trees with more than on root node, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-tvz
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ node. It is similar to pst-tree, though it uses a different
 placement algorithm.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,24 +40,11 @@ placement algorithm.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.01-2
-+ Revision: 755486
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.01-1
-+ Revision: 719404
-- texlive-pst-tvz
-- texlive-pst-tvz
-- texlive-pst-tvz
-- texlive-pst-tvz
-
