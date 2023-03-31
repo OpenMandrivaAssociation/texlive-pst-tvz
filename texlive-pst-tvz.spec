@@ -1,6 +1,6 @@
 Name:		texlive-pst-tvz
 Version:	23451
-Release:	1
+Release:	2
 Summary:	Draw trees with more than on root node, using PSTricks
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-tvz
