@@ -3,7 +3,7 @@ Version:	23451
 Release:	2
 Summary:	Draw trees with more than on root node, using PSTricks
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-tvz
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/contrib/pst-tvz
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst-tvz.doc.r%{version}.tar.xz
